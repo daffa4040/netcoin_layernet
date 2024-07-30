@@ -1,3 +1,6 @@
+#  JOIN TELEGRAM : https://t.me/apsstudiotech
+#  JOIN DISCORD : https://discord.gg/N9caefVJ7F
+
 import asyncio
 import websockets
 import json
@@ -23,6 +26,9 @@ def get_random_color():
         Fore.CYAN
     ]
     return random.choice(colors)
+
+#  JOIN TELEGRAM : https://t.me/apsstudiotech
+#  JOIN DISCORD : https://discord.gg/N9caefVJ7F
 
 def log_message(account_number, message):
     durability_color = get_random_color()
@@ -131,6 +137,9 @@ async def connect(access_token, account_number):
                             await send_in_game_message(ws, data)
             except json.JSONDecodeError as e:
                 log_message(account_number, f'Account #{account_number} | Failed to parse JSON: {e}')
+
+    #  JOIN TELEGRAM : https://t.me/apsstudiotech
+    #  JOIN DISCORD : https://discord.gg/N9caefVJ7F
 
     async def run():
         reconnect_attempts = 0
